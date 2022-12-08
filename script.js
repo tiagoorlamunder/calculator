@@ -25,13 +25,14 @@ function clean() {
 
 function insert(digit) {
     var digits = document.getElementById('screen').innerText
-    var digit = document.getElementById(digit).innerText
-    if (digits.length < 18) {
+    if (digits.length < 18 && !(digits == '' && (digit == '0' || digit == '.' || isOperator(digit)))) {
         document.getElementById('screen').innerText += digit
     }
 }
 
 function calculate() {
     var digits = document.getElementById('screen').innerText
-    document.getElementById('screen').innerText = eval(digits)
+    if (!digits == '') {
+        document.getElementById('screen').innerText = eval(digits)
+    }
 }
