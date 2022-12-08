@@ -1,48 +1,6 @@
-function isNumber(digit) {
-    if (digit == '1' || digit == '2' || digit == '3' || digit == '4' || digit == '5' || digit == '6' || digit == '7' || digit == '8' || digit == '9') {
-        return true
-    }
-    return false
-}
-
-function isZero(digit) {
-    if (digit == '0') {
-        return true
-    }
-    return false
-}
-
-function isOperator(digit) {
-    if (digit == '*' || digit == '/' || digit == '+' || digit == '-') {
-        return true
-    }
-    return false
-}
-
-function isDot(digit) {
-    if (digit == '.') {
-        return true
-    }
-    return false
-}
-
-function isDot(digit) {
-    if (digit == '.') {
-        return true
-    }
-    return false
-}
-
-function isEmpty(digit) {
-    if (digit == '') {
-        return true
-    }
-    return false
-}
-
 function returnsLastNumber(digits) {
     var lastNumber = ''
-    for(d = digits.length - 1; d >= 0; d--) {
+    for (d = digits.length - 1; d >= 0; d--) {
         if (isOperator(digits[d])) {
             return lastNumber
         } else {
@@ -50,14 +8,6 @@ function returnsLastNumber(digits) {
         }
     }
     return lastNumber
-}
-
-function numberIncludes(number, digit) {
-    number.includes(digit)
-}
-
-function clean() {
-    document.getElementById('screen').innerText = ''
 }
 
 function insert(digit) {
@@ -82,9 +32,9 @@ function insert(digit) {
     } else {
         if (isOperator(lastDigit) && isOperator(digit)) {
             document.getElementById('screen').innerText = digits.slice(0, -1) + digit
-        } else if (isOperator(lastButOneDigit) && isZero(lastDigit) && inNumber(digit)) {
+        } else if (isOperator(lastButOneDigit) && isZero(lastDigit) && isNumber(digit)) {
             document.getElementById('screen').innerText = digits.slice(0, -1) + digit
-        } else if (isZero(digits) && digit != '.') {
+        } else if (isZero(digits) && isNumber(digit)) {
             document.getElementById('screen').innerText = digits.slice(0, -1) + digit
         } else {
             document.getElementById('screen').innerText += digit
