@@ -1,0 +1,22 @@
+.div-screen {
+    height: 20px;
+    width: 270px;
+    background: rgb(234, 230, 230);
+    border-radius: 6px;
+    padding: 16px;
+    text-align: right;
+}
+
+.span-screen {
+    font-size: 25px;
+    font-family: Courier;
+    font-weight: bold;
+    width: 207px;
+    background-color: rgb(234, 230, 230);
+    height: 30px;
+    font-size: 25px;
+    color: black;
+    text-align: right !important;
+    padding: 5px;
+    margin: 5px;
+}

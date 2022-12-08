@@ -1,0 +1,33 @@
+.table-keyboard {
+    height: 25px;
+    width: 300px;
+    padding: 10px;
+    background: rgb(234, 230, 230);
+    border-radius: 6px;
+    text-align: center;
+}
+
+.tr-keyboard {
+    text-align: center;
+}
+
+.td-keyboard {
+    text-align: center;
+}
+
+.span-keyboard {
+    font-size: 25px;
+    font-family: Courier;
+    font-weight: bold;
+}
+
+.button-keyboard {
+    background: rgb(38, 41, 41);
+    color: white;
+    border-radius: 6px;
+    border-color: aliceblue;
+    font-size: 25px;
+    padding: 20px;
+    margin: 3px;
+    cursor: pointer;
+}
