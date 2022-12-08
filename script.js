@@ -61,13 +61,15 @@ function insert(digit) {
     var lastNumber = returnsLastNumber(digits)
     var lastDigit = digits.slice(-1)
     var lastButOneDigit = digits.slice(-2, -1)
-    if (!((isEmpty(digits) && (isZero(digit) || isOperator(digit) || isDot(digit))) || digits.length >= 18)) {
+    if (!((isEmpty(digits) && (isOperator(digit) || isDot(digit))) || digits.length >= 18)) {
         if (!((isDot(lastDigit) && (isOperator(digit))) || (isDot(digit) && lastNumber.includes('.')))) {
             if (!(isOperator(lastButOneDigit) && isZero(lastDigit) && isZero(digit))) {
                 if (!(isOperator(lastDigit) && isDot(digit))) {
                     if (isOperator(lastDigit) && isOperator(digit)) {
                         document.getElementById('screen').innerText = digits.slice(0, -1) + digit
-                    } else if (isOperator(lastButOneDigit) && isZero(lastDigit)) {
+                    } else if (isOperator(lastButOneDigit) && isZero(lastDigit) && digit != '.') {
+                        document.getElementById('screen').innerText = digits.slice(0, -1) + digit
+                    } else if (digits == '0' && digit != '.') {
                         document.getElementById('screen').innerText = digits.slice(0, -1) + digit
                     } else {
                         document.getElementById('screen').innerText += digit
