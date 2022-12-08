@@ -1,36 +1,29 @@
-function returnsLastNumber(digits) {
-    var lastNumber = ''
-    for (d = digits.length - 1; d >= 0; d--) {
-        if (isOperator(digits[d])) {
-            return lastNumber
-        }
-        lastNumber = digits[d] + lastNumber
-    }
-    return lastNumber
-}
-
 function insert(digit) {
     var digits = document.getElementById('screen').innerText
     var lastNumber = returnsLastNumber(digits)
     var lastDigit = digits.slice(-1)
     var lastButOneDigit = digits.slice(-2, -1)
-    if (digits.length >= 18) {
-        console.log()
+    if (digits.length >= 21) {
+        console.log('This digit cannot be typed now...')
     } else if (isEmpty(digits) && isDot(digit)) {
-        console.log()
+        console.log('This digit cannot be typed now...')
     } else if (isEmpty(digits) && isOperator(digit)) {
-        console.log()
+        console.log('This digit cannot be typed now...')
     } else if (isDot(lastDigit) && (isOperator(digit))) {
-        console.log()
+        console.log('This digit cannot be typed now...')
     } else if (isDot(digit) && numberIncludes(lastNumber, '.')) {
-        console.log()
+        console.log('This digit cannot be typed now...')
     } else if (isOperator(lastButOneDigit) && isZero(lastDigit) && isZero(digit)) {
-        console.log()
+        console.log('This digit cannot be typed now...')
     } else if (isOperator(lastDigit) && isDot(digit)) {
-        console.log()
+        console.log('This digit cannot be typed now...')
     } else {
         if (isOperator(lastDigit) && isOperator(digit)) {
-            document.getElementById('screen').innerText = digits.slice(0, -1) + digit
+            if (digit == lastDigit) {
+                console.log('This digit cannot be typed now...')
+            } else {
+                document.getElementById('screen').innerText = digits.slice(0, -1) + digit
+            }
         } else if (isOperator(lastButOneDigit) && isZero(lastDigit) && isNumber(digit)) {
             document.getElementById('screen').innerText = digits.slice(0, -1) + digit
         } else if (isZero(digits) && isNumber(digit)) {
@@ -43,7 +36,5 @@ function insert(digit) {
 
 function calculate() {
     var digits = document.getElementById('screen').innerText
-    if (!digits == '') {
-        document.getElementById('screen').innerText = eval(digits)
-    }
+    document.getElementById('screen').innerText = eval(digits)
 }

@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="style/calculator.css">
     <link rel="stylesheet" href="style/keyboard.css">
     <link rel="stylesheet" href="style/screen.css">
-    <script src="script/custom.js"></script>
     <script src="script/boolean.js"></script>
+    <script src="script/custom.js"></script>
+    <script src="script/utils.js"></script>
     <title>Calculadora</title>
 </head>
 
@@ -20,44 +21,44 @@
         <div class="div-screen"><span class="span-screen" nome="screen" id="screen">0</span></div>
         <br>
         <table class="table-keyboard">
-            <tr class="tr-keyboard">
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('/')"><span name="/" id="/"
+            <tr>
+                <td><button class="button-keyboard" onclick="insert('/')"><span name="/" id="/"
                             class="span-keyboard">/</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('7')"><span name="7" id="7"
+                <td><button class="button-keyboard" onclick="insert('7')"><span name="7" id="7"
                             class="span-keyboard">7</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('8')"><span name="8" id="8"
+                <td><button class="button-keyboard" onclick="insert('8')"><span name="8" id="8"
                             class="span-keyboard">8</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('9')"><span name="9" id="9"
+                <td><button class="button-keyboard" onclick="insert('9')"><span name="9" id="9"
                             class="span-keyboard">9</span></button></td>
             </tr>
-            <tr class="tr-keyboard">
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('*')"><span name="*" id="*"
+            <tr>
+                <td><button class="button-keyboard" onclick="insert('*')"><span name="*" id="*"
                             class="span-keyboard">*</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('4')"><span name="4" id="4"
+                <td><button class="button-keyboard" onclick="insert('4')"><span name="4" id="4"
                             class="span-keyboard">4</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('5')"><span name="5" id="5"
+                <td><button class="button-keyboard" onclick="insert('5')"><span name="5" id="5"
                             class="span-keyboard">5</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('6')"><span name="6" id="6"
+                <td><button class="button-keyboard" onclick="insert('6')"><span name="6" id="6"
                             class="span-keyboard">6</span></button></td>
             </tr>
-            <tr class="tr-keyboard">
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('-')"><span name="-" id="-"
+            <tr>
+                <td><button class="button-keyboard" onclick="insert('-')"><span name="-" id="-"
                             class="span-keyboard">-</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('1')"><span name="1" id="1"
+                <td><button class="button-keyboard" onclick="insert('1')"><span name="1" id="1"
                             class="span-keyboard">1</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('2')"><span name="2" id="2"
+                <td><button class="button-keyboard" onclick="insert('2')"><span name="2" id="2"
                             class="span-keyboard">2</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('3')"><span name="3" id="3"
+                <td><button class="button-keyboard" onclick="insert('3')"><span name="3" id="3"
                             class="span-keyboard">3</span></button></td>
             </tr>
-            <tr class="tr-keyboard">
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('+')"><span name="+" id="+"
+            <tr>
+                <td><button class="button-keyboard" onclick="insert('+')"><span name="+" id="+"
                             class="span-keyboard">+</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('.')"><span name="." id="."
+                <td><button class="button-keyboard" onclick="insert('.')"><span name="." id="."
                             class="span-keyboard">.</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="insert('0')"><span name="0" id="0"
+                <td><button class="button-keyboard" onclick="insert('0')"><span name="0" id="0"
                             class="span-keyboard">0</span></button></td>
-                <td class="td-keyboard"><button class="button-keyboard" onclick="calculate()"><span name="=" id="="
+                <td><button class="button-keyboard" onclick="calculate()"><span name="=" id="="
                             class="span-keyboard">=</span></button></td>
             </tr>
         </table>
