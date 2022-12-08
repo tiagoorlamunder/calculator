@@ -1,19 +1,19 @@
 function isNumber(digit) {
-    if (digit == 'one' || digit == 'two' || digit == 'three' || digit == 'four' || digit == 'five' || digit == 'six' || digit == 'seven' || digit == 'eigth' || digit == 'nine') {
+    if (digit == '1' || digit == '2' || digit == '3' || digit == '4' || digit == '5' || digit == '6' || digit == '7' || digit == '8' || digit == '9') {
         return true
     }
     return false
 }
 
 function isOperator(digit) {
-    if (digit == 'multiplication' || digit == 'division' || digit == 'addition' || digit == 'subtraction') {
+    if (digit == '*' || digit == '/' || digit == '+' || digit == '-') {
         return true
     }
     return false
 }
 
 function isDot(digit) {
-    if (digit == 'dot') {
+    if (digit == '.') {
         return true
     }
     return false
