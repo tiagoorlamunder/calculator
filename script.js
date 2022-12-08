@@ -5,6 +5,13 @@ function isNumber(digit) {
     return false
 }
 
+function isZero(digit) {
+    if (digit == '0') {
+        return true
+    }
+    return false
+}
+
 function isOperator(digit) {
     if (digit == '*' || digit == '/' || digit == '+' || digit == '-') {
         return true
@@ -19,14 +26,21 @@ function isDot(digit) {
     return false
 }
 
+
+
 function clean() {
     document.getElementById('screen').innerText = ''
 }
 
 function insert(digit) {
     var digits = document.getElementById('screen').innerText
-    if (digits.length < 18 && !(digits == '' && (digit == '0' || digit == '.' || isOperator(digit)))) {
-        document.getElementById('screen').innerText += digit
+    if (digits.length < 18 && !(digits == '' && (isZero(digit) || isOperator(digit) || isDot(digit)))) {
+        var lastDigit = digits.slice(-1)
+        if (isOperator(lastDigit) && isOperator(digit)) {
+            document.getElementById('screen').innerText = digits.slice(0, -1) + digit
+        } else {
+            document.getElementById('screen').innerText += digit
+        }
     }
 }
 
