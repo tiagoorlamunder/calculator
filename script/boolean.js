@@ -31,5 +31,5 @@ function isEmpty(digit) {
 }
 
 function numberIncludes(number, digit) {
-    number.includes(digit)
+    return number.includes(digit)
 }
