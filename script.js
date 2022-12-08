@@ -40,18 +40,34 @@ function isEmpty(digit) {
     return false
 }
 
+function returnsLastNumber(digits) {
+    var lastNumber = ''
+    for(d = digits.length - 1; d >= 0; d--) {
+        if (isOperator(digits[d])) {
+            return lastNumber
+        } else {
+            lastNumber += digits[d]
+        }
+    }
+    return lastNumber
+}
+
 function clean() {
     document.getElementById('screen').innerText = ''
 }
 
 function insert(digit) {
     var digits = document.getElementById('screen').innerText
+    var lastNumber = returnsLastNumber(digits)
     var lastDigit = digits.slice(-1)
-    if (!(isEmpty(digits) && (isZero(digit) || isOperator(digit) || isDot(digit)))) {
-        if (!((isDot(lastDigit) && (isOperator(digit))) || (isDot(digit) &&  digits.includes('.')))) {
-            if (!(isOperator(lastDigit) && isDot(digit))) {
-                if (digits.length < 18) {
+    var lastButOneDigit = digits.slice(-2, -1)
+    if (!((isEmpty(digits) && (isZero(digit) || isOperator(digit) || isDot(digit))) || digits.length >= 18)) {
+        if (!((isDot(lastDigit) && (isOperator(digit))) || (isDot(digit) && lastNumber.includes('.')))) {
+            if (!(isOperator(lastButOneDigit) && isZero(lastDigit) && isZero(digit))) {
+                if (!(isOperator(lastDigit) && isDot(digit))) {
                     if (isOperator(lastDigit) && isOperator(digit)) {
+                        document.getElementById('screen').innerText = digits.slice(0, -1) + digit
+                    } else if (isOperator(lastButOneDigit) && isZero(lastDigit)) {
                         document.getElementById('screen').innerText = digits.slice(0, -1) + digit
                     } else {
                         document.getElementById('screen').innerText += digit
