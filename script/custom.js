@@ -3,7 +3,9 @@ function insert(digit) {
     var lastNumber = returnsLastNumber(digits)
     var lastDigit = digits.slice(-1)
     var lastButOneDigit = digits.slice(-2, -1)
-    if (digits.length >= 21) {
+    if (digits.length >= 22) {
+        console.log('This digit cannot be typed now...')
+    } else if (hasLyrics(digits)) {
         console.log('This digit cannot be typed now...')
     } else if (isEmpty(digits) && isDot(digit)) {
         console.log('This digit cannot be typed now...')

@@ -6,6 +6,10 @@
     padding: 10px;
 }
 
+.tr-keyboard {
+    text-align: center;
+}
+
 .span-keyboard {
     font-family: Courier;
     font-size: 25px;
@@ -13,11 +17,16 @@
 }
 
 .button-keyboard {
+    height: 100px;
+    width: 80px;
     background: rgb(38, 41, 41);
     color: white;
     border-radius: 6px;
     border-color: aliceblue;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 25px;
     margin: 3px;
 }
