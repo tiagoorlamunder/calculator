@@ -5,6 +5,8 @@ function insert(digit) {
     var lastButOneDigit = digits.slice(-2, -1)
     if (digits.length >= 22) {
         console.log('This digit cannot be typed now...')
+    } else if (digits.length >= 21 && isOperator(digit)) {
+        console.log('This digit cannot be typed now...')
     } else if (hasLyrics(digits)) {
         console.log('This digit cannot be typed now...')
     } else if (isEmpty(digits) && isDot(digit)) {
