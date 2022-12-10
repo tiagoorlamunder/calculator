@@ -1,0 +1,19 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "A simple but very cool calculator",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/tiagoorlamunder/calculator",
+  "keywords": [
+    "Electron",
+    "Calculator",
+    "Numbers"
+  ],
+  "author": "Tiago Luiz Orlamünder",
+  "devDependencies": {
+    "electron": "^22.0.0"
+  }
+}
