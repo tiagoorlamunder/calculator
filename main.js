@@ -7,6 +7,7 @@ function createWindow () {
     height: 619,
     autoHideMenuBar: true,
     resizable: false,
+    icon: __dirname + "/calculator.ico",
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
