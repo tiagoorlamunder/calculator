@@ -4,7 +4,10 @@
   "description": "A simple but very cool calculator",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=images/calculator.ico --prune=true --out=release_builds",
+    "package-win": "electron-packager . calculator --overwrite --asar=true --platform=win32 --arch=ia32 --icon=calculator.ico --prune=true --out=release_builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Calculadora\"",
+    "package-linux": "electron-packager . electron-tutorial-app --overwrite --asar=true --platform=linux --arch=x64 --icon=images/calculator.ico --prune=true --out=release_builds"
   },
   "repository": "https://github.com/tiagoorlamunder/calculator",
   "keywords": [
