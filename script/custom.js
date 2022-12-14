@@ -4,7 +4,7 @@ function calculate() {
     document.getElementById('screen').innerText = eval(digits)
 }
 
-function insert(digit) {
+function alter(digit) {
     var status = returnStatus()
     var digits = document.getElementById('screen').innerText
     var lastNumber = returnLastNumber(digits)
